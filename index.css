@@ -24,6 +24,10 @@ header > div > h1 {
     flex-shrink: 2;
 }
 
+header > div > p {
+    color: white;
+}
+
 header > div > input,
 header > div > button {
     background: #6943FF;
@@ -34,8 +38,10 @@ header > div > button {
 
 header > div > input {
     font-size: 4rem;
-    max-width: 8rem;
+    width: 10ch;
     text-align: center;
+    margin-left: auto;
+    margin-right: auto;
     font-weight: 600;
     color: white;
     border: 2px solid #B295FF;

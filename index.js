@@ -8,9 +8,28 @@ const convertBtn = document.getElementById("convert-btn")
 const lengthEl = document.getElementById("length")
 const volumeEl = document.getElementById("volume")
 const massEl = document.getElementById("mass")
+const alertText = document.getElementById("alert-text")
+
+
+inputEl.addEventListener("input", () => {
+  inputEl.style.width = (inputEl.value.length + 1) + "ch";
+});
 
 function convert() {
     let input = inputEl.value
+    let inputArr = input.split("")
+    let characters = new Set(inputArr)
+    let alphabet = new Set("abcdefghijklmnopqrstuvwxyz".split(''))
+    if (characters.has(",")) {
+        alertText.innerText = 'Fractional numbers should be entered with a ".", like: 0.5'
+        return
+    }
+    for (let char of characters) {
+    if (alphabet.has(char.toLowerCase())) {
+        alertText.innerText = 'Please only enter numbers.'
+        return
+    }
+    }
     lengthEl.innerText = `
                             ${input} meters = ${(input * 3.281).toFixed(2)} feet | ${input} feet = ${(input / 3.281).toFixed(2)} meters                        
                         `
@@ -23,3 +42,9 @@ function convert() {
 }
 
 convertBtn.addEventListener('click', convert)
+
+inputEl.addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+    convertBtn.click();
+  }
+});
