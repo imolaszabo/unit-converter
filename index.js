@@ -22,11 +22,18 @@ function convert() {
     let alphabet = new Set("abcdefghijklmnopqrstuvwxyz".split(''))
     if (characters.has(",")) {
         alertText.innerText = 'Fractional numbers should be entered with a ".", like: 0.5'
+        lengthEl.innerText = ""
+        volumeEl.innerText = ""
+        massEl.innerText = ""
         return
     }
     for (let char of characters) {
     if (alphabet.has(char.toLowerCase())) {
         alertText.innerText = 'Please only enter numbers.'
+        lengthEl.innerText = ""
+        volumeEl.innerText = ""
+        massEl.innerText = ""
+
         return
     }
     }
