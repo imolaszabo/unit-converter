@@ -1,0 +1,80 @@
+body {
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    box-sizing: border-box;
+}
+
+header > div {
+    background: #6943FF;
+    margin: 0;
+    padding: 10%;
+    color: white;
+    min-height: 14rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+header > div > h1 {
+    margin-top: 0;
+    font-weight: 700;
+    font-size: 5vw;
+    display: flex;
+    flex-shrink: 2;
+}
+
+header > div > input,
+header > div > button {
+    background: #6943FF;
+    border-radius: 5px;
+    display: block;
+    margin: 1rem auto;
+}
+
+header > div > input {
+    font-size: 4rem;
+    max-width: 8rem;
+    text-align: center;
+    font-weight: 600;
+    color: white;
+    border: 2px solid #B295FF;
+}
+
+header > div > button {
+    color: #3D3D3D;
+    background-color: white;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    font-size: 1rem;
+}
+
+main {
+    background-color: #F4F4F4;
+    margin: 0;
+    text-align: center;
+    padding: 5%;
+}
+
+main > div {
+    background-color: white;
+    margin: 1.5rem auto;
+    width: 80%;
+    padding: 1rem; 
+}
+
+main > div > h2 {
+    color: #5A537B;
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+main > div > p {
+    margin: 0;
+    color: #353535;
+    width: 100%;
+    display: block;
+    white-space: no-wrap;
+    overflow: hidden;
+    box-sizing: border-box; 
+}
