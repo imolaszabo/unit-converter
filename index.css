@@ -37,14 +37,15 @@ header > div > button {
 }
 
 header > div > input {
-    font-size: 4rem;
-    width: 10ch;
+    font-size: clamp(1.5rem, 8vw, 3rem);
+    width: 100%;
+    max-width: 12ch;
     text-align: center;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 1rem auto;
     font-weight: 600;
     color: white;
     border: 2px solid #B295FF;
+    box-sizing: border-box;
 }
 
 header > div > button {
